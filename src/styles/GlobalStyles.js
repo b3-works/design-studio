@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: UncutSansMed;
     font-weight: 400;
   }
 
