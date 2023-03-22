@@ -5,6 +5,7 @@ import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 import Work from './Pages/Work';
 import Error from './Pages/Error';
+import './fonts/font.css';
 
 function App() {
   return (

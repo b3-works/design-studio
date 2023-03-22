@@ -18,17 +18,17 @@ const Layout = () => {
 const StyledLayout = styled.div`
   background-color: ${(props) => props.theme.color.gray};
   color: ${(props) => props.theme.color.white};
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: hidden;
   position: relative;
 `;
 
 const StyledMain = styled.main`
   border: 1px solid red;
-  height: 100vh;
   width: 95%;
-  padding: 1.5rem 1rem;
+  height: 100%;
 `;
 export default Layout;
