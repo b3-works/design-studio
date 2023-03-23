@@ -27,12 +27,35 @@ const NavLinks = styled(m.ul)`
   gap: 20px;
 `;
 
+const NavLinkWrapper = styled(m.li)`
+  padding: 5px 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: ${(props) => props.theme.color.white};
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: 0.3s ease-out 0.1s;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+`;
+
 const NavLink = styled(Link)`
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: ${(props) => props.theme.color.white};
 `;
 
-const LogoVariants = {
+const LogoVars = {
   hidden: { opacity: 0, scale: 1.5 },
   visible: {
     opacity: 1,
@@ -43,7 +66,7 @@ const LogoVariants = {
   },
 };
 
-const NavbarVariant = {
+const NavbarVars = {
   hidden: { opacity: 0, scale: 1.5 },
   visible: {
     opacity: 1,
@@ -56,7 +79,7 @@ const NavbarVariant = {
   },
 };
 
-const NavItemVariant = {
+const NavItemVars = {
   hidden: { opacity: 0, scale: 1.5 },
   visible: { opacity: 1, scale: 1 },
 };
@@ -65,22 +88,22 @@ const Navbar = () => {
   return (
     <Header>
       <Nav>
-        <m.div variants={LogoVariants} initial="hidden" animate="visible">
+        <m.div variants={LogoVars} initial="hidden" animate="visible">
           <Logo to="/">B3 STUDIO</Logo>
         </m.div>
-        <NavLinks variants={NavbarVariant} initial="hidden" animate="visible">
-          <m.li variants={NavItemVariant}>
-            <NavLink to="/">HOME</NavLink>
-          </m.li>
-          <m.li variants={NavItemVariant}>
-            <NavLink to="/work">WORK</NavLink>
-          </m.li>
-          <m.li variants={NavItemVariant}>
-            <NavLink to="/about">ABOUT</NavLink>
-          </m.li>
-          <m.li variants={NavItemVariant}>
-            <NavLink to="/contact">CONTACT</NavLink>
-          </m.li>
+        <NavLinks variants={NavbarVars} initial="hidden" animate="visible">
+          <NavLinkWrapper variants={NavItemVars}>
+            <NavLink to="/">Home</NavLink>
+          </NavLinkWrapper>
+          <NavLinkWrapper variants={NavItemVars}>
+            <NavLink to="/work">Work</NavLink>
+          </NavLinkWrapper>
+          <NavLinkWrapper variants={NavItemVars}>
+            <NavLink to="/about">About</NavLink>
+          </NavLinkWrapper>
+          <NavLinkWrapper variants={NavItemVars}>
+            <NavLink to="/contact">Contact</NavLink>
+          </NavLinkWrapper>
         </NavLinks>
       </Nav>
     </Header>
