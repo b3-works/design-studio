@@ -17,8 +17,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${(props) => props.theme.color.gray};
-    font-family: UncutSansMed;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
   }
 
   ol, ul {

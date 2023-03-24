@@ -4,7 +4,6 @@ import { motion as m } from 'framer-motion';
 
 const Header = styled.header`
   width: 95%;
-  position: sticky;
   top: 0;
 `;
 
@@ -12,12 +11,12 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2.3rem 0;
 `;
 
 const Logo = styled(Link)`
-  font-family: HansonBold;
-  font-size: 1.7rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
   color: ${(props) => props.theme.color.white};
 `;
 
@@ -51,7 +50,7 @@ const NavLinkWrapper = styled(m.li)`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: ${(props) => props.theme.color.white};
 `;
 

@@ -1,11 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Home from './Pages/Home';
-import Work from './Pages/Work';
+import About from './Pages/About/index';
+import Contact from './Pages/Contact/index';
+import Home from './Pages/Home/index';
+import Work from './Pages/Work/index';
 import Error from './Pages/Error';
-import './fonts/font.css';
 
 function App() {
   return (
