@@ -1,26 +1,25 @@
 import styled from 'styled-components';
+import Line from '../../components/Line';
 import designTeam from '../../image/design-team.jpg';
 
 const Section = styled.section`
-  /* border: 1px solid red; */
-  /* height: 100%; */
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  /*  */
   display: flex;
   flex-direction: column;
+`;
+
+const ContentWrapper = styled.div`
   padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
   gap: 2.5rem;
 `;
 
 const TextWrapper = styled.div`
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-between;
 `;
 
 const MainText = styled.h1`
-  /* border: 1px solid yellow; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -35,12 +34,11 @@ const SubText = styled.p`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  /* padding-bottom: 1.5rem; */
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 1rem 1rem 1rem 2rem;
 `;
 
 const ImageWrapper = styled.div`
-  /* border: 1px solid green; */
   height: 30rem;
   overflow: hidden;
   position: relative;
@@ -58,27 +56,32 @@ const ImageWrapper = styled.div`
 
 const Hero = () => {
   return (
-    <Section>
-      <TextWrapper>
-        <MainText>
-          <div>
-            WE DESIGN <span>UNIQUE WEB/GRAPHIC</span>
-          </div>
-
-          <div>EXPERIENCE.</div>
-        </MainText>
-        <SubText>
-          <div>We are a</div>
-          <div>design studio</div>
-          <div>
-            from <span>South Korea</span>.
-          </div>
-        </SubText>
-      </TextWrapper>
-      <ImageWrapper>
-        <img src={designTeam} alt="Design Team" />
-      </ImageWrapper>
-    </Section>
+    <>
+      <Section>
+        <Line />
+        <ContentWrapper>
+          <TextWrapper>
+            <MainText>
+              <div>
+                WE DESIGN <span>UNIQUE WEB/GRAPHIC</span>
+              </div>
+              <div>EXPERIENCE.</div>
+            </MainText>
+            <SubText>
+              <div>We are a</div>
+              <div>design studio</div>
+              <div>
+                from <span>South Korea</span>.
+              </div>
+            </SubText>
+          </TextWrapper>
+          <ImageWrapper>
+            <img src={designTeam} alt="Design Team" />
+          </ImageWrapper>
+        </ContentWrapper>
+        <Line />
+      </Section>
+    </>
   );
 };
 
