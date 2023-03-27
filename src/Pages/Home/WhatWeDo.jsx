@@ -3,7 +3,6 @@ import Line from '../../components/Line';
 
 const Section = styled.section`
   padding: 4rem 0;
-  border: 1px solid green;
   display: grid;
   grid-template-columns: 20% 80%;
 `;
@@ -19,7 +18,6 @@ const Title = styled.div`
   padding: 1rem;
 `;
 const ContentContainer = styled.div`
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
