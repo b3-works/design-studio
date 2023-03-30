@@ -37,49 +37,44 @@ const CardTitle = styled.h1`
   font-family: 'Bebas Neue', cursive;
   font-size: 2rem;
 `;
-const WhatWeDo = () => {
+export default function WhatWeDo() {
   return (
-    <>
-      <Section>
-        <Title>What we do</Title>
+    <Section>
+      <Title>What we do</Title>
 
-        <ContentContainer>
-          <Cards>
-            {/* <Icon /> */}
-            <CardTitle>Strategy</CardTitle>
-            <div>Descrition of service</div>
-          </Cards>
-          <Cards>
-            {/* <Icon /> */}
-            <CardTitle>Branding</CardTitle>
-            <div>Descrition of service</div>
-          </Cards>
-          <Cards>
-            {/* <Icon /> */}
-            <CardTitle>Art Direction</CardTitle>
-            <div>Descrition of service</div>
-          </Cards>
+      <ContentContainer>
+        <Cards>
+          {/* <Icon /> */}
+          <CardTitle>Strategy</CardTitle>
+          <div>Descrition of service</div>
+        </Cards>
+        <Cards>
+          {/* <Icon /> */}
+          <CardTitle>Branding</CardTitle>
+          <div>Descrition of service</div>
+        </Cards>
+        <Cards>
+          {/* <Icon /> */}
+          <CardTitle>Art Direction</CardTitle>
+          <div>Descrition of service</div>
+        </Cards>
 
-          <Cards>
-            {/* <Icon /> */}
-            <CardTitle>UI/UX Design</CardTitle>
-            <div>Descrition of service</div>
-          </Cards>
-          <Cards>
-            {/* <Icon /> */}
-            <CardTitle>Logo Design</CardTitle>
-            <div>Descrition of service</div>
-          </Cards>
-          <Cards>
-            {/* <Icon /> */}
-            <CardTitle>Front-End</CardTitle>
-            <div>Descrition of service</div>
-          </Cards>
-        </ContentContainer>
-      </Section>
-      <Line />
-    </>
+        <Cards>
+          {/* <Icon /> */}
+          <CardTitle>UI/UX Design</CardTitle>
+          <div>Descrition of service</div>
+        </Cards>
+        <Cards>
+          {/* <Icon /> */}
+          <CardTitle>Logo Design</CardTitle>
+          <div>Descrition of service</div>
+        </Cards>
+        <Cards>
+          {/* <Icon /> */}
+          <CardTitle>Front-End</CardTitle>
+          <div>Descrition of service</div>
+        </Cards>
+      </ContentContainer>
+    </Section>
   );
-};
-
-export default WhatWeDo;
+}

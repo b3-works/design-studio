@@ -53,35 +53,30 @@ const Tag = styled.div`
   padding: 0.8rem;
 `;
 
-const Selected = () => {
+export default function Selected() {
   return (
-    <>
-      <Section>
-        <Title>Selected Works</Title>
-        <WorksContainer>
-          {/* data & map */}
-          {data.slice(0, 4).map((work) => (
-            <Work key={work.id}>
-              <Marquee gradient={false}>
-                <ProjectTitleWrapper>
-                  <ProjectTitle>{work.title}</ProjectTitle>
-                  <ProjectTitle>{work.title}</ProjectTitle>
-                  <ProjectTitle>{work.title}</ProjectTitle>
-                  <ProjectTitle>{work.title}</ProjectTitle>
-                </ProjectTitleWrapper>
-              </Marquee>
-              <TagWrapper>
-                {work.tags.map((tag) => (
-                  <Tag>{tag}</Tag>
-                ))}
-              </TagWrapper>
-            </Work>
-          ))}
-        </WorksContainer>
-      </Section>
-      <Line />
-    </>
+    <Section>
+      <Title>Selected Works</Title>
+      <WorksContainer>
+        {/* data & map */}
+        {data.slice(0, 4).map((work) => (
+          <Work key={work.id}>
+            <Marquee gradient={false}>
+              <ProjectTitleWrapper>
+                <ProjectTitle>{work.title}</ProjectTitle>
+                <ProjectTitle>{work.title}</ProjectTitle>
+                <ProjectTitle>{work.title}</ProjectTitle>
+                <ProjectTitle>{work.title}</ProjectTitle>
+              </ProjectTitleWrapper>
+            </Marquee>
+            <TagWrapper>
+              {work.tags.map((tag) => (
+                <Tag>{tag}</Tag>
+              ))}
+            </TagWrapper>
+          </Work>
+        ))}
+      </WorksContainer>
+    </Section>
   );
-};
-
-export default Selected;
+}

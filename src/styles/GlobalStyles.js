@@ -21,6 +21,10 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 300;
   }
 
+  h1 {
+    font-family: 'Bebas Neue', cursive;
+  }
+
   ol, ul {
     list-style: none;
   }

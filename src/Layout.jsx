@@ -3,34 +3,29 @@ import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-const StyledLayout = styled.div`
-  color: ${(props) => props.theme.color.white};
-`;
-
 const Container = styled.div`
-  border: 1px solid ${(props) => props.theme.color.white};
-  margin: 20px;
+  color: ${(props) => props.theme.color.white};
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 const StyledMain = styled.main`
+  border: 1px solid ${(props) => props.theme.color.white};
+  border-radius: 3rem;
   width: 95%;
   height: 100%;
 `;
 
 const Layout = () => {
   return (
-    <StyledLayout>
-      <Container>
-        <Navbar />
-        <StyledMain>
-          <Outlet />
-        </StyledMain>
-        <Footer />
-      </Container>
-    </StyledLayout>
+    <Container>
+      <Navbar />
+      <StyledMain>
+        <Outlet />
+      </StyledMain>
+      <Footer />
+    </Container>
   );
 };
 

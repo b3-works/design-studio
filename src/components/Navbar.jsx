@@ -1,23 +1,30 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion as m } from 'framer-motion';
+import Line from './Line';
+import VerticalLine from './VerticalLine';
 
 const Header = styled.header`
   width: 95%;
-  top: 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Nav = styled.nav`
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.3rem 0;
+  height: 4rem;
+  gap: 3rem;
 `;
 
 const Logo = styled(Link)`
-  font-family: 'Bebas Neue', cursive;
-  font-size: 3rem;
   color: ${(props) => props.theme.color.white};
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
 `;
 
 const NavLinks = styled(m.ul)`
@@ -50,7 +57,8 @@ const NavLinkWrapper = styled(m.li)`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
   color: ${(props) => props.theme.color.white};
 `;
 
@@ -83,30 +91,32 @@ const NavItemVars = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <Header>
       <Nav>
-        <m.div variants={LogoVars} initial="hidden" animate="visible">
-          <Logo to="/">B3 STUDIO</Logo>
-        </m.div>
+        <m.h1 variants={LogoVars} initial="hidden" animate="visible">
+          <Logo to="/">B3.</Logo>
+        </m.h1>
+
         <NavLinks variants={NavbarVars} initial="hidden" animate="visible">
           <NavLinkWrapper variants={NavItemVars}>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">HOME</NavLink>
           </NavLinkWrapper>
+          <m.div variants={NavItemVars}>/</m.div>
           <NavLinkWrapper variants={NavItemVars}>
-            <NavLink to="/work">Work</NavLink>
+            <NavLink to="/work">WORK</NavLink>
           </NavLinkWrapper>
+          <m.div variants={NavItemVars}>/</m.div>
           <NavLinkWrapper variants={NavItemVars}>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">ABOUT</NavLink>
           </NavLinkWrapper>
+          <m.div variants={NavItemVars}>/</m.div>
           <NavLinkWrapper variants={NavItemVars}>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact">CONTACT</NavLink>
           </NavLinkWrapper>
         </NavLinks>
       </Nav>
     </Header>
   );
-};
-
-export default Navbar;
+}

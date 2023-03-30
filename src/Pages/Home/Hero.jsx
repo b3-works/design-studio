@@ -1,88 +1,74 @@
 import styled from 'styled-components';
-import Line from '../../components/Line';
-import designTeam from '../../image/design-team.jpg';
 
 const Section = styled.section`
-  display: flex;
-  flex-direction: column;
+  border: 1px solid ${(props) => props.theme.color.white};
+  /* background-color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.gray}; */
+  border-radius: 2rem;
+  margin: 2rem;
+  padding: 4rem 0;
 `;
 
 const ContentWrapper = styled.div`
-  padding: 4rem 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 `;
 
-const TextWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
+const BrandText = styled.h1`
+  font-size: 16rem;
+  -webkit-text-stroke: 2px ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.gray};
 `;
 
 const MainText = styled.h1`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-family: 'Bebas Neue', cursive;
   font-size: 9rem;
+  text-align: center;
 `;
 
 const SubText = styled.p`
-  border: 1px solid white;
-  font-size: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 0.5rem;
-  padding: 1rem 1rem 1rem 2rem;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
 `;
 
-const ImageWrapper = styled.div`
-  height: 30rem;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0.7rem;
+// const ImageWrapper = styled.div`
+//   height: 30rem;
+//   overflow: hidden;
+//   position: relative;
+//   border-radius: 0.7rem;
 
-  img {
-    width: 110%;
-    height: inherit;
-    object-fit: cover;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-`;
+//   img {
+//     width: 110%;
+//     height: inherit;
+//     object-fit: cover;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//   }
+// `;
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <>
-      <Section>
-        <Line />
-        <ContentWrapper>
-          <TextWrapper>
-            <MainText>
-              <div>
-                WE DESIGN <span>UNIQUE WEB/GRAPHIC</span>
-              </div>
-              <div>EXPERIENCE.</div>
-            </MainText>
-            <SubText>
-              <div>We are a</div>
-              <div>design studio</div>
-              <div>
-                from <span>South Korea</span>.
-              </div>
-            </SubText>
-          </TextWrapper>
-          <ImageWrapper>
-            <img src={designTeam} alt="Design Team" />
-          </ImageWrapper>
-        </ContentWrapper>
-        <Line />
-      </Section>
-    </>
-  );
-};
+    <Section>
+      <ContentWrapper>
+        <BrandText>B3 Studio.</BrandText>
 
-export default Hero;
+        <MainText>
+          <div>WE DESIGN</div>
+          <div>
+            UNIQUE <span>WEB/GRAPHIC</span>
+          </div>
+          <div>EXPERIENCE.</div>
+        </MainText>
+
+        <SubText>
+          We are a design studio from <span>South Korea</span>.
+        </SubText>
+      </ContentWrapper>
+    </Section>
+  );
+}

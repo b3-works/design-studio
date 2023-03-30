@@ -1,37 +1,36 @@
 import styled from 'styled-components';
 import Marquee from 'react-fast-marquee';
 import LogoMarquee from '../../components/LogoMarquee';
-import Line from '../../components/Line';
+
+import VerticalLine from '../../components/VerticalLine';
 
 const Section = styled.section`
-  padding: 4rem 0;
-  display: grid;
-  grid-template-columns: 20% 80%;
+  padding: 1.5rem 0;
+`;
+
+const Contents = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100px;
+  gap: 2rem;
 `;
 
 const ClientText = styled.div`
-  border: 1px solid ${(props) => props.theme.color.white};
-  width: 14rem;
-  height: 12rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 1rem;
+  width: 8.5rem;
+  text-align: start;
   font-size: 1.3rem;
 `;
 
-const Clients = () => {
+export default function Clients() {
   return (
-    <>
-      <Section>
+    <Section>
+      <Contents>
         <ClientText>Our Clients</ClientText>
+        <VerticalLine />
         <Marquee gradient={false}>
           <LogoMarquee />
         </Marquee>
-      </Section>
-      <Line />
-    </>
+      </Contents>
+    </Section>
   );
-};
-
-export default Clients;
+}
