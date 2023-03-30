@@ -1,44 +1,88 @@
 [
   {
     "id": 1,
-    "title": "Project 1",
+    "title": "Friendly Kitchen",
+    "client": "Eco-Friendly Kitchenware Co.",
     "tags": ["UI/UX", "Branding"],
+    "shortDescription": "Branding and Web Design",
+    "description": "Design a new branding and web system for a line of eco-friendly kitchenware products.",
     "imageUrl": "url",
-    "description": "desc"
+    "team": [
+      { "name": "John Smith", "role": "Creative Director" },
+      { "name": "Sarah Johnson", "role": "Designer" },
+      { "name": "Michael Chen", "role": "Project Manager" }
+    ]
   },
   {
     "id": 2,
-    "title": "Project 2",
+    "title": "Daytime Agency",
+    "client": "Digital Marketing Agency",
     "tags": ["Strategy", "Branding"],
+    "shortDescription": "Branding and Strategy to approach users ",
+    "description": "Redesign and update the strategy of agency's website to better showcase their services and portfolio to the users.",
     "imageUrl": "url",
-    "description": "desc"
+    "team": [
+      { "name": "David Lee", "role": "Lead Designer" },
+      { "name": "Emily Chen", "role": "Front-end Developer" },
+      { "name": "Alex Wong", "role": "Back-end Developer" },
+      { "name": "Julie Kim", "role": "QA Engineer" }
+    ]
   },
   {
     "id": 3,
-    "title": "Project 3",
+    "title": "Bigger Better Fitness",
+    "client": "Fitness Equipment Co.",
     "tags": ["UI/UX", "Front-End"],
+    "shortDescription": "Website redesign",
+    "description": "Redesign a new line of fitness equipment website that is interactive, functional, and visually appealing.",
     "imageUrl": "url",
-    "description": "desc"
+    "team": [
+      { "name": "Sarah Johnson", "role": "Lead Designer" },
+      { "name": "David Lee", "role": "Product Designer" },
+      { "name": "Emily Chen", "role": "Industrial Designer" },
+      { "name": "Michael Chen", "role": "Project Manager" }
+    ]
   },
   {
     "id": 4,
-    "title": "Project 4",
+    "title": "Forest Store",
+    "client": "E-Commerce Site",
     "tags": ["Logo", "Art Direction", "Branding"],
+    "shortDescription": "Event Planing and Design",
+    "description": "Branding and designing new logo and directing the event to improve user experience for an upcoming offline marketplace opening.",
     "imageUrl": "url",
-    "description": "desc"
+    "team": [
+      { "name": "John Smith", "role": "Creative Director" },
+      { "name": "Emily Chen", "role": "UX Designer" },
+      { "name": "Alex Wong", "role": "Front-end Developer" }
+    ]
   },
   {
     "id": 5,
-    "title": "Project 5",
+    "title": "Hype Is Over",
+    "client": "Fashion Brand",
     "tags": ["Strategy", "Branding", "UI/UX"],
+    "shortDescription": "Redesign website based on the new strategy, branding and fresh new UI/UX",
+    "description": "Website renewal for a fashion brand that is modern, elegant, and unique.",
     "imageUrl": "url",
-    "description": "desc"
+    "team": [
+      { "name": "David Lee", "role": "Lead Designer" },
+      { "name": "Sarah Johnson", "role": "Designer" },
+      { "name": "Michael Chen", "role": "Project Manager" }
+    ]
   },
   {
     "id": 6,
-    "title": "Project 6",
+    "title": "Starving To Death",
+    "client": "Food Delivery App",
     "tags": ["UI/UX", "Front-End"],
+    "shortDescription": "Social Media Graphics",
+    "description": "Design a series of social media graphics to promote a new feature on a food delivery app.",
     "imageUrl": "url",
-    "description": "desc"
+    "team": [
+      { "name": "Emily Chen", "role": "Lead Designer" },
+      { "name": "Alex Wong", "role": "Graphic Designer" },
+      { "name": "Julie Kim", "role": "Project Manager" }
+    ]
   }
 ]

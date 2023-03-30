@@ -1,0 +1,64 @@
+{
+  "awards": [
+    {
+      "id": 1,
+      "name": "Webby Award",
+      "category": "Website",
+      "year": "2023",
+      "project": "Redesign of E-Commerce Website",
+      "client": "Online Retailer",
+      "description": "Recognizing excellence in web design and development, the Webby Award is the leading international award honoring excellence on the internet.",
+      "url": "https://www.webbyawards.com/"
+    },
+    {
+      "id": 2,
+      "name": "Awwwards Site of the Day",
+      "category": "Web Design",
+      "year": "2022",
+      "project": "Corporate Website",
+      "client": "Professional Services Firm",
+      "description": "The Awwwards recognize the talent and effort of the best web designers, developers, and agencies in the world.",
+      "url": "https://www.awwwards.com/"
+    },
+    {
+      "id": 3,
+      "name": "Red Dot Design Award",
+      "category": "Product Design",
+      "year": "2022",
+      "project": "Smart Home Device",
+      "client": "Technology Company",
+      "description": "The Red Dot Design Award is an international product design and communication design prize awarded by the Design Zentrum Nordrhein Westfalen in Essen, Germany.",
+      "url": "https://www.red-dot.org/"
+    },
+    {
+      "id": 4,
+      "name": "Communication Arts Design Annual Award",
+      "category": "Packaging Design",
+      "year": "2021",
+      "project": "Sustainable Packaging",
+      "client": "Eco-Friendly Brand",
+      "description": "Communication Arts is a professional journal for those involved in visual communications. Their Design Annual competition celebrates the best in communication design, advertising, illustration, photography, and interactive media.",
+      "url": "https://www.commarts.com/"
+    },
+    {
+      "id": 5,
+      "name": "HOW International Design Award",
+      "category": "Logo Design",
+      "year": "2021",
+      "project": "Corporate Branding",
+      "client": "Business Consulting Firm",
+      "description": "The HOW International Design Awards recognizes excellence in design work around the globe, with categories including branding, packaging, illustration, and more.",
+      "url": "https://www.howdesign.com/"
+    },
+    {
+      "id": 6,
+      "name": "Clio Awards",
+      "category": "Advertising",
+      "year": "2020",
+      "project": "Integrated Campaign",
+      "client": "Consumer Goods Company",
+      "description": "The Clio Awards is the esteemed international awards competition for the creative business. Founded in 1959 to celebrate high achievement in advertising, the Clios annually and throughout the year recognize the work, the agencies and the talent that push boundaries and establish new precedent.",
+      "url": "https://clios.com/"
+    }
+  ]
+}
