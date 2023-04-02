@@ -5,14 +5,15 @@ import LogoMarquee from '../../components/LogoMarquee';
 import VerticalLine from '../../components/VerticalLine';
 
 const Section = styled.section`
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+  margin: 0 5rem;
 `;
 
 const Contents = styled.div`
   display: flex;
   align-items: center;
-  height: 100px;
-  gap: 2rem;
+  height: 120px;
+  gap: 3rem;
 `;
 
 const ClientText = styled.div`
