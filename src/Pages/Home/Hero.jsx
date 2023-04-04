@@ -16,6 +16,7 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin: 3.7rem 0;
 `;
 
 const BrandText = styled(m.h1)`

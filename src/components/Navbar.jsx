@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion as m } from 'framer-motion';
-import Line from './Line';
-import VerticalLine from './VerticalLine';
 
 const Header = styled.header`
   width: 95%;
@@ -21,10 +19,25 @@ const Nav = styled.nav`
   gap: 3rem;
 `;
 
+const LogoWrapper = styled(m.div)`
+  display: flex;
+  gap: 1rem;
+`;
+
 const Logo = styled(Link)`
   color: ${(props) => props.theme.color.white};
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: 'Bebas Neue', cursive;
+  border: 1px solid ${(props) => props.theme.color.white};
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.5rem 0.2rem;
+`;
+
+const BrandName = styled.div`
+  align-self: center;
+  font-size: 1.3rem;
+  letter-spacing: 2.5px;
+  font-weight: bold;
 `;
 
 const NavLinks = styled(m.ul)`
@@ -95,9 +108,10 @@ export default function Navbar() {
   return (
     <Header>
       <Nav>
-        <m.h1 variants={LogoVars} initial="hidden" animate="visible">
+        <LogoWrapper variants={LogoVars} initial="hidden" animate="visible">
           <Logo to="/">B3.</Logo>
-        </m.h1>
+          <BrandName>b3 studio</BrandName>
+        </LogoWrapper>
 
         <NavLinks variants={NavbarVars} initial="hidden" animate="visible">
           <NavLinkWrapper variants={NavItemVars}>
