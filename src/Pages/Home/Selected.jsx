@@ -1,27 +1,39 @@
 import styled from 'styled-components';
-import Line from '../../components/Line';
 import data from '../../data/projects.json';
 import Marquee from 'react-fast-marquee';
+import VerticalLine from '../../components/VerticalLine';
 
 const Section = styled.section`
-  padding: 4rem 0;
-  display: grid;
-  grid-template-columns: 20% 80%;
-`;
-const Title = styled.div`
-  border: 1px solid ${(props) => props.theme.color.white};
-  font-size: 1.3rem;
-  width: 14rem;
-  height: 12rem;
+  margin: 4rem 2rem;
+  height: 85rem;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 1rem;
 `;
+
+const TitleWrapper = styled.div`
+  width: 30%;
+  display: flex;
+  justify-content: center;
+`;
+
+const Title = styled.div`
+  height: 85rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  div {
+    position: sticky;
+    top: 10rem;
+  }
+`;
+
 const WorksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  padding: 0 3rem;
+  gap: 3rem;
 `;
 const Work = styled.div`
   border: 1px solid darkgray;
@@ -47,8 +59,9 @@ const TagWrapper = styled.div`
   right: 1rem;
 `;
 const Tag = styled.div`
-  border: 1px solid white;
+  border: 1px solid ${(props) => props.theme.color.white};
   border-radius: 2rem;
+  color: ${(props) => props.theme.color.white};
   font-size: 1.5rem;
   padding: 0.8rem;
 `;
@@ -56,7 +69,14 @@ const Tag = styled.div`
 export default function Selected() {
   return (
     <Section>
-      <Title>Selected Works</Title>
+      <TitleWrapper>
+        <Title>
+          <div>Selected Works</div>
+        </Title>
+      </TitleWrapper>
+
+      <VerticalLine />
+
       <WorksContainer>
         {/* data & map */}
         {data.slice(0, 4).map((work) => (
@@ -71,7 +91,7 @@ export default function Selected() {
             </Marquee>
             <TagWrapper>
               {work.tags.map((tag) => (
-                <Tag>{tag}</Tag>
+                <Tag key={tag}>{tag}</Tag>
               ))}
             </TagWrapper>
           </Work>

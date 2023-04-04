@@ -1,38 +1,38 @@
 import styled from 'styled-components';
-import Line from '../../components/Line';
 import VerticalLine from '../../components/VerticalLine';
 
 const Section = styled.section`
-  border: 1px solid red;
   margin: 4rem 2rem;
-  height: 70rem;
+  height: 45rem;
   display: flex;
-  /* gap: 3rem; */
 `;
 
 const TitleWrapper = styled.div`
-  border: 1px solid white;
   width: 14%;
-  height: 100%;
   display: flex;
   justify-content: center;
 `;
 
 const Title = styled.div`
-  border: 1px solid blue;
-  height: 100%;
+  height: 45rem;
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
-const ContentContainer = styled.div`
-  border: 1px solid green;
-  width: 100%;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
+  div {
+    position: sticky;
+    top: 10rem;
+  }
+`;
+
+const ContentContainer = styled.div`
+  width: 100%;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   gap: 3rem;
 `;
 const Cards = styled.div`

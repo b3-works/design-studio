@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { motion as m } from 'framer-motion';
+import Korea from '../../image/south-korea.svg';
+import { useEffect, useState } from 'react';
 
 const Section = styled(m.section)`
   border: 1px solid ${(props) => props.theme.color.white};
@@ -19,12 +21,23 @@ const ContentWrapper = styled.div`
   margin: 3.7rem 0;
 `;
 
+const BrandTextWrapper = styled.div`
+  width: 100%;
+  padding-left: 3rem;
+`;
+
 const BrandText = styled(m.h1)`
   font-size: 16rem;
   -webkit-text-stroke: 2px ${(props) => props.theme.color.white};
-  color: ${(props) => props.theme.color.gray};
-  width: 100%;
-  padding-left: 3rem;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 39, 45, 0.7511379551820728) 0%,
+    rgba(131, 135, 140, 1) 65%,
+    rgba(223, 227, 231, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 `;
 
 const MainText = styled(m.h1)`
@@ -43,7 +56,12 @@ const MainFirst = styled(m.div)`
   }
 
   span {
-    border: 1px solid yellow;
+    background: linear-gradient(
+      90deg,
+      rgba(223, 227, 231, 1) 0%,
+      rgba(131, 135, 140, 1) 55%,
+      rgba(35, 39, 45, 0.7511379551820728) 100%
+    );
     width: 100%;
     margin: 1rem 1rem 2rem;
   }
@@ -54,21 +72,39 @@ const MainSecond = styled(m.div)`
   justify-content: space-between;
 
   span {
-    border: 1px solid yellow;
+    background: linear-gradient(
+      90deg,
+      rgba(35, 39, 45, 0.7511379551820728) 0%,
+      rgba(131, 135, 140, 1) 55%,
+      rgba(223, 227, 231, 1) 100%
+    );
     width: 100%;
     margin: 1rem 1rem 2rem;
   }
 `;
 
-const SubText = styled(m.p)`
+const SubText = styled(m.div)`
   font-size: 2rem;
   width: 100%;
   text-align: start;
   padding-left: 3rem;
+  display: flex;
+  gap: 5px;
+`;
 
-  span {
+const FlagWrapper = styled.div`
+  position: relative;
+
+  &:first-child {
     border-bottom: 2px solid ${(props) => props.theme.color.white};
   }
+`;
+
+const ImageWrapper = styled.div`
+  position: absolute;
+  top: -16.5rem;
+  right: -24rem;
+  /* display: none; */
 `;
 
 const animationVars = {
@@ -124,6 +160,10 @@ const animationVars = {
 };
 
 export default function Hero() {
+  const [hoverStatus, setHoverStatus] = useState(false);
+
+  useEffect(() => {}, [hoverStatus]);
+
   return (
     <Section
       variants={animationVars}
@@ -132,14 +172,17 @@ export default function Hero() {
       custom={1}
     >
       <ContentWrapper>
-        <BrandText
-          variants={animationVars}
-          initial="hiddenLeft"
-          animate="showOriginX"
-          custom={2}
-        >
-          B3 Studio.
-        </BrandText>
+        <BrandTextWrapper>
+          <BrandText
+            variants={animationVars}
+            initial="hiddenLeft"
+            animate="showOriginX"
+            custom={2}
+          >
+            B3 Studio.
+          </BrandText>
+        </BrandTextWrapper>
+
         <MainText>
           <MainFirst
             variants={animationVars}
@@ -148,7 +191,8 @@ export default function Hero() {
             custom={3}
           >
             <div>
-              <div>WE</div> <div>DESIGN</div>
+              <div>WE</div>
+              <div>DESIGN</div>
             </div>
             <m.span
               variants={animationVars}
@@ -180,13 +224,21 @@ export default function Hero() {
             <div>EXPERIENCE.</div>
           </MainSecond>
         </MainText>
+
         <SubText
           variants={animationVars}
           initial="hiddenDown"
           animate="showOriginY"
           custom={5}
         >
-          We are a design studio from <span>South Korea</span>.
+          We are a design studio from
+          <FlagWrapper>
+            <div>South Korea</div>
+            <ImageWrapper>
+              <img src={Korea} alt="South Korea Flag" width={400} />
+            </ImageWrapper>
+          </FlagWrapper>
+          .
         </SubText>
       </ContentWrapper>
     </Section>
