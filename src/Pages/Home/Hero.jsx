@@ -1,7 +1,7 @@
+import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion as m } from 'framer-motion';
 import Korea from '../../image/south-korea.svg';
-import { useEffect, useState } from 'react';
 
 const Section = styled(m.section)`
   border: 1px solid ${(props) => props.theme.color.white};
@@ -104,7 +104,6 @@ const ImageWrapper = styled.div`
   position: absolute;
   top: -16.5rem;
   right: -24rem;
-  /* display: none; */
 `;
 
 const animationVars = {
@@ -160,9 +159,25 @@ const animationVars = {
 };
 
 export default function Hero() {
-  const [hoverStatus, setHoverStatus] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const imageRef = useRef(null);
+  const textRef = useRef(null);
 
-  useEffect(() => {}, [hoverStatus]);
+  const handleMouse = () => {
+    setIsHovered(!isHovered);
+  };
+  const showImage = () => {
+    imageRef.current.style.opacity = '1';
+    imageRef.current.style.transition = 'all 0.5s ease';
+  };
+  const hideImage = () => {
+    imageRef.current.style.opacity = '0';
+    imageRef.current.style.transition = 'all 0.5s ease';
+  };
+
+  useEffect(() => {
+    isHovered === true ? showImage() : hideImage();
+  }, [isHovered]);
 
   return (
     <Section
@@ -233,8 +248,14 @@ export default function Hero() {
         >
           We are a design studio from
           <FlagWrapper>
-            <div>South Korea</div>
-            <ImageWrapper>
+            <div
+              ref={textRef}
+              onMouseEnter={handleMouse}
+              onMouseLeave={handleMouse}
+            >
+              South Korea
+            </div>
+            <ImageWrapper ref={imageRef}>
               <img src={Korea} alt="South Korea Flag" width={400} />
             </ImageWrapper>
           </FlagWrapper>

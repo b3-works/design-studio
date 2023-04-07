@@ -45,6 +45,14 @@ const Cards = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background: radial-gradient(
+    circle,
+    #23272d 75%,
+    #575b60 93%,
+    #6f7378 95%,
+    #979b9f 98%,
+    #dfe3e7 100%
+  );
 `;
 const CardTitle = styled.h1`
   font-family: 'Bebas Neue', cursive;
@@ -65,17 +73,22 @@ export default function WhatWeDo() {
         <Cards>
           {/* <Icon /> */}
           <CardTitle>Strategy</CardTitle>
-          <div>Descrition of service</div>
+          <div>We plan for the right strategy to help your brand grow.</div>
         </Cards>
         <Cards>
           {/* <Icon /> */}
           <CardTitle>Branding</CardTitle>
-          <div>Descrition of service</div>
+          <div>We use market data for branding.</div>
         </Cards>
         <Cards>
           {/* <Icon /> */}
           <CardTitle>Art Direction</CardTitle>
-          <div>Descrition of service</div>
+          <div>
+            We can support art direction by providing creative expertise, access
+            to specialized tools and collaborators, and overseeing the execution
+            of visual strategies to elevate the impact and effectiveness of a
+            project.
+          </div>
         </Cards>
 
         <Cards>
