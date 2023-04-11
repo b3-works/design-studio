@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.color.gray};
+    background-color: ${(props) => props.theme.color.black};
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
   }

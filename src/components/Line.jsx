@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const LineContainer = styled.div`
   width: 100%;
-  height: 1px;
+  height: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ const LineContainer = styled.div`
 const AnimatedLine = styled(m.div)`
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${(props) => props.theme.color.red};
   position: absolute;
   right: 100%;
 `;

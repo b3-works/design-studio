@@ -28,7 +28,7 @@ const LogoWrapper = styled(m.div)`
 `;
 
 const Logo = styled(Link)`
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.ivory};
   font-size: 3.5rem;
   font-family: 'Bebas Neue', cursive;
 `;
@@ -36,7 +36,7 @@ const Logo = styled(Link)`
 const BrandName = styled(Link)`
   align-self: center;
   font-size: 1.3rem;
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.ivory};
   letter-spacing: 2.5px;
   font-weight: bold;
 `;
@@ -45,7 +45,8 @@ const NavLinks = styled(m.ul)`
   display: flex;
   align-items: center;
   gap: 20px;
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.red};
+  font-weight: bold;
 `;
 
 const NavLinkWrapper = styled(m.li)`
@@ -54,9 +55,9 @@ const NavLinkWrapper = styled(m.li)`
 
   &::after {
     content: '';
-    height: 1px;
+    height: 2px;
     width: 100%;
-    background-color: ${(props) => props.theme.color.white};
+    background-color: ${(props) => props.theme.color.ivory};
     position: absolute;
     left: 0;
     bottom: 0;
@@ -73,8 +74,9 @@ const NavLinkWrapper = styled(m.li)`
 
 const NavLink = styled(Link)`
   font-size: 0.9rem;
+  font-weight: bold;
   letter-spacing: 2px;
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.ivory};
 `;
 
 const LogoVars = {

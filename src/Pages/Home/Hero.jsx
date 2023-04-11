@@ -4,7 +4,9 @@ import { motion as m } from 'framer-motion';
 import Korea from '../../image/south-korea.svg';
 
 const Section = styled(m.section)`
-  border: 1px solid ${(props) => props.theme.color.white};
+  border: 10px solid ${(props) => props.theme.color.red};
+  background-color: ${(props) => props.theme.color.ivory};
+  color: ${(props) => props.theme.color.black};
   border-radius: 2rem;
   margin: 2rem;
   padding: 4rem 0;
@@ -28,13 +30,8 @@ const BrandTextWrapper = styled.div`
 
 const BrandText = styled(m.h1)`
   font-size: 16rem;
-  -webkit-text-stroke: 2px ${(props) => props.theme.color.white};
-  background: linear-gradient(
-    90deg,
-    rgba(35, 39, 45, 0.7511379551820728) 0%,
-    rgba(131, 135, 140, 1) 65%,
-    rgba(223, 227, 231, 1) 100%
-  );
+  -webkit-text-stroke: 10px ${(props) => props.theme.color.black};
+  background-color: ${(props) => props.theme.color.red};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
@@ -56,12 +53,7 @@ const MainFirst = styled(m.div)`
   }
 
   span {
-    background: linear-gradient(
-      90deg,
-      rgba(223, 227, 231, 1) 0%,
-      rgba(131, 135, 140, 1) 55%,
-      rgba(35, 39, 45, 0.7511379551820728) 100%
-    );
+    background-color: ${(props) => props.theme.color.black};
     width: 100%;
     margin: 1rem 1rem 2rem;
   }
@@ -72,12 +64,7 @@ const MainSecond = styled(m.div)`
   justify-content: space-between;
 
   span {
-    background: linear-gradient(
-      90deg,
-      rgba(35, 39, 45, 0.7511379551820728) 0%,
-      rgba(131, 135, 140, 1) 55%,
-      rgba(223, 227, 231, 1) 100%
-    );
+    background-color: ${(props) => props.theme.color.black};
     width: 100%;
     margin: 1rem 1rem 2rem;
   }
@@ -90,13 +77,14 @@ const SubText = styled(m.div)`
   padding-left: 3rem;
   display: flex;
   gap: 5px;
+  font-weight: bold;
 `;
 
 const FlagWrapper = styled.div`
   position: relative;
 
   &:first-child {
-    border-bottom: 2px solid ${(props) => props.theme.color.white};
+    border-bottom: 4px solid ${(props) => props.theme.color.red};
   }
 `;
 
@@ -138,9 +126,11 @@ const animationVars = {
     },
   }),
   shrink: {
+    border: '0px solid #d53b3e',
     width: '0%',
   },
   expand: (custom) => ({
+    border: '10px solid #d53b3e',
     width: '100%',
     transition: {
       duration: 2,
@@ -149,6 +139,7 @@ const animationVars = {
     },
   }),
   expandShort: (custom) => ({
+    border: '10px solid #d53b3e',
     width: '100%',
     transition: {
       duration: 2,

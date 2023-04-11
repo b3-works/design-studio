@@ -4,14 +4,14 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 const Container = styled.div`
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.ivory};
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 const StyledMain = styled.main`
-  border: 1px solid ${(props) => props.theme.color.white};
+  border: 1rem solid ${(props) => props.theme.color.red};
   border-radius: 3rem;
   width: 95%;
   height: 100%;

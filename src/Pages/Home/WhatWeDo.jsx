@@ -1,73 +1,71 @@
 import styled from 'styled-components';
-import VerticalLine from '../../components/VerticalLine';
+import { motion as m } from 'framer-motion';
 
 const Section = styled.section`
+  border: 1px solid white;
   margin: 4rem 2rem;
-  height: 45rem;
-  display: flex;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
 `;
-
 const TitleWrapper = styled.div`
-  width: 14%;
-  display: flex;
-  justify-content: center;
+  border: 1px solid blue;
+  border-radius: 50%;
+  padding: 15rem;
 `;
 
 const Title = styled.div`
-  height: 45rem;
-  font-size: 1.3rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid red;
+  width: 28rem;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+
+  &::after {
+    content: '';
+    border: 1px solid yellow;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+  }
+`;
+const Circle = styled.span`
+  border: 1px solid yellow;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+`;
+const ContentContainer = styled.div`
+  border: 1px solid green;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-
-  div {
-    position: sticky;
-    top: 10rem;
-  }
 `;
 
-const ContentContainer = styled.div`
-  width: 100%;
-  padding: 0 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 3rem;
-`;
 const Cards = styled.div`
-  border: 1px solid ${(props) => props.theme.color.white};
-  border-radius: 2rem;
-  height: 18rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background: radial-gradient(
-    circle,
-    #23272d 75%,
-    #575b60 93%,
-    #6f7378 95%,
-    #979b9f 98%,
-    #dfe3e7 100%
-  );
+  border: 1px solid blue;
 `;
 const CardTitle = styled.h1`
   font-family: 'Bebas Neue', cursive;
   font-size: 2rem;
+  border: 1px solid ${(props) => props.theme.color.ivory};
 `;
 export default function WhatWeDo() {
   return (
     <Section>
       <TitleWrapper>
-        <Title>
-          <div>What We Do</div>
-        </Title>
+        <Title>What We Do</Title>
+        <Circle></Circle>
       </TitleWrapper>
-
-      <VerticalLine />
 
       <ContentContainer>
         <Cards>

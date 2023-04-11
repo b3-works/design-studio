@@ -4,7 +4,7 @@ import { motion as m } from 'framer-motion';
 import styled from 'styled-components';
 
 const LineContainer = styled.div`
-  width: 1px;
+  width: 4px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ const LineContainer = styled.div`
 const AnimatedLine = styled(m.div)`
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${(props) => props.theme.color.red};
   position: absolute;
 `;
 
