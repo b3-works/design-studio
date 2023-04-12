@@ -21,7 +21,8 @@ const ClientText = styled.div`
   font-size: 1.3rem;
   font-weight: bold;
   border: 3px solid ${(props) => props.theme.color.red};
-  padding: 0.4rem;
+  border-radius: 2rem;
+  padding: 1rem;
 `;
 
 const animationVars = {

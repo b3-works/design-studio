@@ -42,6 +42,7 @@ const MainText = styled(m.h1)`
   width: 100%;
   padding: 0 3rem;
 `;
+
 const MainFirst = styled(m.div)`
   display: flex;
   justify-content: space-between;
@@ -133,8 +134,8 @@ const animationVars = {
     border: '10px solid #d53b3e',
     width: '100%',
     transition: {
-      duration: 2,
-      delay: custom * 0.7,
+      duration: 1.5,
+      delay: custom * 0.6,
       ease: [0, 0.71, 0.2, 1.01],
     },
   }),
@@ -142,8 +143,8 @@ const animationVars = {
     border: '10px solid #d53b3e',
     width: '100%',
     transition: {
-      duration: 2,
-      delay: custom * 0.7,
+      duration: 1.5,
+      delay: custom * 0.6,
       ease: [0, 0.71, 0.2, 1.01],
     },
   }),
