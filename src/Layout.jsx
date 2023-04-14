@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const StyledMain = styled.main`
-  border: 1rem solid ${(props) => props.theme.color.red};
+  border: 10px solid ${(props) => props.theme.color.red};
   border-radius: 3rem;
   width: 95%;
   height: 100%;

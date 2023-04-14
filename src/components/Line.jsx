@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const LineContainer = styled.div`
   width: 100%;
-  height: 4px;
+  height: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

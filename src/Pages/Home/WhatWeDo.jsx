@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { FaStarOfLife } from 'react-icons/fa';
 import { motion as m } from 'framer-motion';
+import data from '../../data/cardContents.json';
 
 const Section = styled.section`
   margin: 4rem 2rem;
@@ -45,17 +46,17 @@ const Cards = styled.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 9rem;
+  justify-content: space-between;
 `;
 
-const CardIcon = styled(FaStarOfLife)`
-  font-size: 3.5rem;
+const CardIcon = styled(m(FaStarOfLife))`
+  font-size: 4rem;
 `;
+
 const CardTextWrapper = styled.div``;
 const CardTitle = styled.h1`
   font-family: 'Bebas Neue', cursive;
-  font-size: 2rem;
-  border: 1px solid ${(props) => props.theme.color.ivory};
+  font-size: 3rem;
 `;
 
 export default function WhatWeDo() {
@@ -81,53 +82,15 @@ export default function WhatWeDo() {
       </TitleWrapper>
 
       <ContentContainer>
-        <Cards>
-          <CardIcon />
-          <CardTextWrapper>
-            <CardTitle>Strategy</CardTitle>
-            <div>We use market data for branding.</div>
-          </CardTextWrapper>
-        </Cards>
-        <Cards>
-          <CardIcon />
-          <CardTextWrapper>
-            <CardTitle>Branding</CardTitle>
-            <div>We use market data for branding.</div>
-          </CardTextWrapper>
-        </Cards>
-        <Cards>
-          <CardIcon />
-          <CardTextWrapper>
-            <CardTitle>Art Direction</CardTitle>
-            <div>
-              We can support art direction by providing creative expertise,
-              access to specialized tools and collaborators, and overseeing the
-              execution of visual strategies to elevate the impact and
-              effectiveness of a project.
-            </div>
-          </CardTextWrapper>
-        </Cards>
-        <Cards>
-          <CardIcon />
-          <CardTextWrapper>
-            <CardTitle>UI/UX Design</CardTitle>
-            <div>Descrition of service</div>
-          </CardTextWrapper>
-        </Cards>
-        <Cards>
-          <CardIcon />
-          <CardTextWrapper>
-            <CardTitle>Logo Design</CardTitle>
-            <div>Descrition of service</div>
-          </CardTextWrapper>
-        </Cards>
-        <Cards>
-          <CardIcon />
-          <CardTextWrapper>
-            <CardTitle>Front-End</CardTitle>
-            <div>Descrition of service</div>
-          </CardTextWrapper>
-        </Cards>
+        {data.map((card) => (
+          <Cards key={card.id}>
+            <CardIcon />
+            <CardTextWrapper>
+              <CardTitle>{card.title}</CardTitle>
+              <div>{card.content}</div>
+            </CardTextWrapper>
+          </Cards>
+        ))}
       </ContentContainer>
     </Section>
   );

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import data from '../../data/projects.json';
 import Marquee from 'react-fast-marquee';
-import VerticalLine from '../../components/VerticalLine';
 
 const Section = styled.section`
   margin: 4rem 2rem;
@@ -75,8 +74,6 @@ export default function Selected() {
         </Title>
       </TitleWrapper>
 
-      <VerticalLine />
-
       <WorksContainer>
         {/* data & map */}
         {data.slice(0, 4).map((work) => (
@@ -90,9 +87,10 @@ export default function Selected() {
               </ProjectTitleWrapper>
             </Marquee>
             <TagWrapper>
-              {work.tags.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
+              {/* {work.tags.map((tag) => (
+                <Tag key={tag[1]}>{tag}</Tag>
+              ))} */}
+              <Tag>{work.tags}</Tag>
             </TagWrapper>
           </Work>
         ))}
