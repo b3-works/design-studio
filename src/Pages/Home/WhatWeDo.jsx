@@ -53,12 +53,34 @@ const CardIcon = styled(m(FaStarOfLife))`
   font-size: 4rem;
 `;
 
-const CardTextWrapper = styled.div``;
-const CardTitle = styled.h1`
-  font-family: 'Bebas Neue', cursive;
-  font-size: 3rem;
+const CardTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  div {
+    text-align: justify;
+    line-height: 1.3rem;
+  }
 `;
 
+const CardTitle = styled.h1`
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+`;
+
+const animationVar = {
+  hidden: { scale: 0 },
+  show: {
+    rotate: 180,
+    scale: 1,
+    // transition: { type: spring, stiffness: 260, damping: 20 },
+  },
+  hover: {
+    rotate: 360,
+    duration: 1,
+  },
+};
 export default function WhatWeDo() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
