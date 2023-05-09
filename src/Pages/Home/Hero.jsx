@@ -32,6 +32,7 @@ const BrandText = styled(m.h1)`
   font-size: 16rem;
   -webkit-text-stroke: 10px ${(props) => props.theme.color.black};
   background-color: ${(props) => props.theme.color.red};
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;

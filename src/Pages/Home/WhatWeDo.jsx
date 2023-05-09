@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styled from 'styled-components';
-import { FaStarOfLife } from 'react-icons/fa';
+import styled, { keyframes } from 'styled-components';
 import { motion as m } from 'framer-motion';
 import data from '../../data/cardContents.json';
+import { FaStarOfLife } from 'react-icons/fa';
 
 const Section = styled.section`
   margin: 4rem 2rem;
@@ -37,7 +37,20 @@ const ContentContainer = styled.div`
   gap: 10px;
 `;
 
-const Cards = styled.div`
+const CardIcon = styled(m(FaStarOfLife))`
+  font-size: 4rem;
+`;
+
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+const Cards = styled(m.div)`
   height: 25rem;
   border: 5px solid ${(props) => props.theme.color.red};
   border-radius: 2rem;
@@ -47,10 +60,10 @@ const Cards = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
 
-const CardIcon = styled(m(FaStarOfLife))`
-  font-size: 4rem;
+  &:hover ${CardIcon} {
+    animation: ${rotateAnimation} 10s linear infinite;
+  }
 `;
 
 const CardTextWrapper = styled.div`
@@ -70,17 +83,15 @@ const CardTitle = styled.h1`
 `;
 
 const animationVar = {
-  hidden: { scale: 0 },
+  hidden: { opacity: 0 },
   show: {
-    rotate: 180,
-    scale: 1,
-    // transition: { type: spring, stiffness: 260, damping: 20 },
-  },
-  hover: {
-    rotate: 360,
-    duration: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
   },
 };
+
 export default function WhatWeDo() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -105,7 +116,13 @@ export default function WhatWeDo() {
 
       <ContentContainer>
         {data.map((card) => (
-          <Cards key={card.id}>
+          <Cards
+            key={card.id}
+            variants={animationVar}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             <CardIcon />
             <CardTextWrapper>
               <CardTitle>{card.title}</CardTitle>
