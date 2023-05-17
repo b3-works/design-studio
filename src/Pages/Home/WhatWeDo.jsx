@@ -62,7 +62,7 @@ const Cards = styled(m.div)`
   justify-content: space-between;
 
   &:hover ${CardIcon} {
-    animation: ${rotateAnimation} 10s linear infinite;
+    animation: ${rotateAnimation} 7s linear infinite;
   }
 `;
 

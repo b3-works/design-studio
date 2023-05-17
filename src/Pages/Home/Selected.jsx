@@ -3,9 +3,11 @@ import data from '../../data/projects.json';
 import Marquee from 'react-fast-marquee';
 
 const Section = styled.section`
+  border: 1px solid red;
   margin: 4rem 2rem;
   height: 85rem;
   display: flex;
+  justify-content: space-between;
 `;
 
 const TitleWrapper = styled.div`
@@ -25,18 +27,24 @@ const Title = styled.div`
   div {
     position: sticky;
     top: 10rem;
+    border: 3px solid ${(props) => props.theme.color.red};
+    border-radius: 2rem;
+    background-color: ${(props) => props.theme.color.black};
+    color: ${(props) => props.theme.color.ivory};
+    padding: 1rem;
   }
 `;
 
 const WorksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 3rem;
+  /* padding: 0 3rem; */
   gap: 3rem;
 `;
 const Work = styled.div`
   border: 1px solid darkgray;
   border-radius: 1rem;
+  width: 100%;
   height: 20rem;
   display: flex;
   position: relative;
@@ -78,12 +86,25 @@ export default function Selected() {
         {/* data & map */}
         {data.slice(0, 4).map((work) => (
           <Work key={work.id}>
-            <Marquee gradient={false}>
+            <Marquee
+              gradient={false}
+              direction="right"
+              // style={{ paddingLeft: 100 }}
+              pauseOnHover={true}
+            >
               <ProjectTitleWrapper>
-                <ProjectTitle>{work.title}</ProjectTitle>
-                <ProjectTitle>{work.title}</ProjectTitle>
-                <ProjectTitle>{work.title}</ProjectTitle>
-                <ProjectTitle>{work.title}</ProjectTitle>
+                <ProjectTitle style={{ padding: '0 30px' }}>
+                  {work.title}
+                </ProjectTitle>
+                <ProjectTitle style={{ padding: '0 30px' }}>
+                  {work.title}
+                </ProjectTitle>
+                <ProjectTitle style={{ padding: '0 30px' }}>
+                  {work.title}
+                </ProjectTitle>
+                {/* <ProjectTitle style={{ padding: '0 20px' }}>
+                  {work.title}
+                </ProjectTitle> */}
               </ProjectTitleWrapper>
             </Marquee>
             <TagWrapper>
